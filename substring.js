@@ -1,4 +1,8 @@
 function searchForSubstring(stringToSearch, stringToFind) {
+  if (stringToSearch === null || stringToFind === null) {
+      return -1
+  }
+
   if (stringToFind.length === 0) {
       return -1
   }
@@ -27,6 +31,8 @@ stringToSearch     abbaba
 stringToFind       bb
 */
 
+
+console.log(searchForSubstring("aababb", null) === -1)
 console.log(searchForSubstring("aababb", "bb") === 4)
 console.log(searchForSubstring("abcdef", "fdasfdas") === -1)
 console.log(searchForSubstring("abcdef", "cde") === 2)
